@@ -27,7 +27,7 @@
 段码a~h的连接方案有两种，分别为：B4、A4、A3、B1、A1、B3、B2、D5（0组）；D4、E4、D3、F4、F3、E2、D2、H2（1组）；
 本项目是通过G6端口选择了第1组的LED段码即D4、E4、D3、F4、F3、E2、D2、H2（1组）
 约束文件里的代码如下：
-'''
+```
 set_property PACKAGE_PIN G6 [get_ports an]
 set_property IOSTANDARD LVCMOS33 [get_ports an]
 
@@ -44,7 +44,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {segment_out[4]}]
 set_property PACKAGE_PIN E2 [get_ports {segment_out[5]}]
 set_property PACKAGE_PIN D2 [get_ports {segment_out[6]}]
 set_property PACKAGE_PIN H2 [get_ports {segment_out[7]}]
-'''//
+```
 **3. 实现中的问题**
 
 实现中按照网络和课本资料核对，发现了可以通过板上的标识找到对应LED灯，和开关的标识，从而可以在代码里实现。
